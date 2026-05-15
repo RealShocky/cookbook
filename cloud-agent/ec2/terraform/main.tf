@@ -31,8 +31,6 @@ locals {
   secret_env_name = "CURSOR_API_KEY"
 }
 
-data "aws_caller_identity" "current" {}
-
 data "aws_vpc" "default" {
   count   = var.vpc_id == null ? 1 : 0
   default = true
